@@ -83,7 +83,7 @@ user.post("/signup" , async (req,res) => {
     // adding random balance to user
     await Account.create({
         userId , 
-        balance: (Math.floor(Math.random() * 1000 * 1000) / 100) + 1
+        balance: Math.floor((Math.floor(Math.random() * 1000 * 1000) / 100) + 1)
         // balance: 1 + Math.random() * 1000
     })
 
